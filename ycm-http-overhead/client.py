@@ -34,6 +34,8 @@ def TalkToServer(req_json):
   # Parse the json and then drop it on the floor. No, this won't get optimized
   # away; remember, this is Python, not C++.
   r.json()
+  print 'Received response with body size: {} KB'.format(
+    len( r.content ) / 1024.0 )
 
 
 def GenerateTestJson():
