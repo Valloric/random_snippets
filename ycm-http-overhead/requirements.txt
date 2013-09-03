@@ -1,0 +1,4 @@
+CherryPy>=3.2.4
+bottle>=0.11.6
+pandas>=0.11.0
+requests>=1.2.3
