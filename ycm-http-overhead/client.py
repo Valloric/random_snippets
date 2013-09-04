@@ -48,6 +48,10 @@ def GenerateTestJson():
 
 
 def Main():
+  # Fire off a few requests to warm up the connection pool
+  for i in xrange(5):
+    TalkToServer(base_json)
+
   # 'stats' is an array of num_runs floats representing num seconds it took to
   # run the test code iters_per_run times. 'setup_code' code is run once per num_run
   # and is not timed.
